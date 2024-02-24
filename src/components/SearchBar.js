@@ -1,6 +1,6 @@
 import React from 'react';
 import "../SearchBar.css"; 
-function SearchBar({ onSearch }) {
+function SearchBar({ searchTerm, onSearch }) {
     return (
         <div className="search-bar-container">
             <input
@@ -8,6 +8,7 @@ function SearchBar({ onSearch }) {
                 type="text"
                 placeholder="Search characters..." 
                 onChange={onSearch}
+                value={searchTerm}
             />
         </div>
     );

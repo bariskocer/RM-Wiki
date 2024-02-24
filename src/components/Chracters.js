@@ -9,10 +9,6 @@ function Chracters() {
     const [searchTerm, setSearchTerm] = useState("");
     const [page, setPage] = useState(1);
 
-    useEffect(() => {
-        fetchData()
-    }, [page])
-
     const fetchData = () => {
         const url = `https://rickandmortyapi.com/api/character?page=${page}`;
         const requestOptions = {
@@ -25,6 +21,11 @@ function Chracters() {
             .then((data) => setChracters(data.results))
             .catch((error) => console.error("Error in fetch", error));
     }
+
+    useEffect(() => {
+        fetchData()
+    }, [page])
+
 
     const handleSearch = (event) => {
         const { value } = event.target;

@@ -12,14 +12,11 @@
     font-size: 16px;
     color: #333;
     outline: none;
-    transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s;
   }
   
   .search-input:focus {
     border-color: #007bff;
   }
   
-  .search-input::placeholder {
-    color: #aaa;
-  }
   
